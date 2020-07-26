@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Zyto Test Automation Suite">
+
+	<listeners>
+		<listener
+			class-name="com.zyto.test.ReportListeners.ExtentReportListener" />
+		<listener class-name="com.zyto.test.ReportListeners.AllureReports" />
+		<listener
+			class-name="com.zyto.test.ReportListeners.ScreenshotListener" />
+	</listeners>
+
+	<test  name="Zyto Automation Test">
+		<classes>
+			<class name="com.zyto.test.base.ZytoBaseTest" />
+			<!-- <class name="com.zyto.test.TestCases.Create_New_Account_Test" /> -->
+			<!-- <class name="com.zyto.test.TestCases.Registration_Test" /> -->
+			<class name="com.zyto.test.TestCases.Create_profile" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

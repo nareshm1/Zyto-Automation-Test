@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.zyto.test.ReportListeners.ExtentReportListener"/>
+    <listener class-name="com.zyto.test.ReportListeners.AllureReports"/>
+    <listener class-name="com.zyto.test.ReportListeners.PDFReport"/>
+    <listener class-name="com.zyto.test.ReportListeners.TesultsListener"/>
+    <listener class-name="com.zyto.test.ReportListeners.ScreenshotListener"/>
+  </listeners>
+  <test thread-count="5" name="Zyto Automation Test(failed)">
+    <classes>
+      <class name="com.zyto.test.TestCases.Create_New_Account_Test">
+        <methods>
+          <include name="Click_On_Create_button"/>
+          <include name="Click_world_icon"/>
+          <include name="SetUp"/>
+          <include name="Click_Signin_button"/>
+          <include name="EndTest"/>
+        </methods>
+      </class> <!-- com.zyto.test.TestCases.Create_New_Account_Test -->
+    </classes>
+  </test> <!-- Zyto Automation Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

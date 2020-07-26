@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Zyto Test Automation Suite]">
+  <listeners>
+    <listener class-name="com.zyto.test.ReportListeners.ExtentReportListener"/>
+    <listener class-name="com.zyto.test.ReportListeners.AllureReports"/>
+    <listener class-name="com.zyto.test.ReportListeners.ScreenshotListener"/>
+  </listeners>
+  <test thread-count="5" name="Zyto Automation Test(failed)">
+    <classes>
+      <class name="com.zyto.test.TestCases.Create_profile">
+        <methods>
+          <include name="TC_035_Validate_clearing_Errors"/>
+          <include name="EndTest"/>
+          <include name="TC_020_Verify__Error_In_Phone_Number_field"/>
+          <include name="TC_019_Verify__Error_In_Phone_Number_field"/>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- com.zyto.test.TestCases.Create_profile -->
+    </classes>
+  </test> <!-- Zyto Automation Test(failed) -->
+</suite> <!-- Failed suite [Zyto Test Automation Suite] -->
