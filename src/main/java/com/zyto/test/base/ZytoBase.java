@@ -23,6 +23,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.Reporter;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.model.Test;
 import com.zyto.test.ConsoleColors.Console_Colors;
@@ -51,9 +52,10 @@ public class ZytoBase {
 	/**
 	 * this method is used to initialize the WebDriver on the basis of browser
 	 * 
-	 * @param browserName
+	 * @param browser
 	 * @return driver
 	 */
+	@Parameters("browser")
 	public WebDriver init_driver(Properties prop) {
 
 		/// To get browser from system or config.prop file

@@ -7,6 +7,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -24,7 +27,7 @@ import com.zyto.test.util.java.ConstantKeywords;
 import com.zyto.test.util.java.ElementLocatorUtils;
 import com.zyto.test.util.java.JavascriptUtil;
 
-public class Payment_Method_Test extends ZytoBase {
+public class Payment_Method_Test extends ZytoBase{
 	// Pages to Used //
 	ZytoBase zytobase;
 	Console_Colors concol;
@@ -63,6 +66,7 @@ public class Payment_Method_Test extends ZytoBase {
 		pcsp = new Product_Company_Selection_Page(driver);
 		pmp = new Payment_Method_Page(driver);
 		ext = new ExtentReportListener();
+		concol = new Console_Colors();
 
 	}
 
@@ -187,7 +191,7 @@ public class Payment_Method_Test extends ZytoBase {
 	
 	@SuppressWarnings("static-access")
 	@Test(description="To Verify without filling the data in State/province fields")
-    public void TC_050_Verify_State_Province_field() throws InterruptedException {
+    public void TC_050_Verify_State_Province_field(ITestResult result) throws InterruptedException {
 		rp.Reg_till_pmp();
 		Thread.sleep(5000);
 		
@@ -208,7 +212,7 @@ public class Payment_Method_Test extends ZytoBase {
 		} else {
 			
 			Assert.fail(Console_Colors.RED_BOLD_BRIGHT + "Error message is  not  displayed for invalid details"
-					+ concol.RESET+ext.getScreenshot(result););
+					+ concol.RESET);
 		}
 	}
 		
@@ -218,4 +222,6 @@ public class Payment_Method_Test extends ZytoBase {
 		System.out.println(concol.BLUE_BOLD_BRIGHT + "****Quitting the browser****" + concol.RESET);
 		driver.quit();
 	}
+
+	
 }

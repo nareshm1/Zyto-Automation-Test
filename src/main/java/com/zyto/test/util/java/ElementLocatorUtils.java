@@ -62,11 +62,14 @@ public class ElementLocatorUtils extends ZytoBase {
 		waitForElementPresent(locator, 10);
 		getElement(locator).click();
 	}
+	
 
 	public String doGetText(By locator) {
 		waitForElementPresent(locator, 10);
 		return getElement(locator).getText();
 	}
+	
+	
 
 	public boolean doIsDisplayed(By locator) {
 		waitForElementPresent(locator, 10);

@@ -2,6 +2,7 @@ package com.zyto.test.pages;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,6 +22,8 @@ public class Create_New_Account_Page extends ZytoBase {
 	// FIRST NAME FEILD
 	@FindBy(xpath = "//input[@id='fName']")
 	static WebElement First_Name;
+	
+	By First_Name1 =  By.xpath("//input[@id='fName']");
 
 	// LAST NAME FEILD
 	@FindBy(xpath = "//input[@id='lName']")
@@ -266,4 +269,6 @@ public class Create_New_Account_Page extends ZytoBase {
 		Select state = new Select(State_Dropdown);
 		return state;
 	}
+	
+	
 }

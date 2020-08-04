@@ -1,5 +1,6 @@
 package com.zyto.test.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -22,6 +23,10 @@ public class Introduction_Page extends ZytoBase {
 	 // Create Account button on Signup Options page
 	@FindBy(xpath = "//button[@type='button'][contains(text(),'Continue')]")
 	static WebElement Intro_Continue_button;
+	
+	
+	
+	By element = By.xpath("findelement");
 	
 	//Text on Intro page
 	@FindBy(xpath ="//div[@class='sign-container mt-3 mt-md-5']")
@@ -60,6 +65,7 @@ public class Introduction_Page extends ZytoBase {
 	
 	//Click on Continue button
 	public static void Click_Continue_button() throws InterruptedException {
+	
 		scrollTo(Intro_Continue_button);
 		Thread.sleep(3000);
 		Intro_Continue_button.click();

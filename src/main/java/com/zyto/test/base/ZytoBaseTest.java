@@ -42,10 +42,10 @@ public class ZytoBaseTest {
 	  System.out.println("basetest");
 	  }
 	 
-	@AfterMethod
-	@AfterTest
-	public void tearDown() {
-		driver.quit();
-	}
+		/*
+		 * @AfterMethod
+		 * 
+		 * @AfterTest public void tearDown() { driver.quit(); }
+		 */
 
 }
